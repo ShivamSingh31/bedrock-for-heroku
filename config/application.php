@@ -34,6 +34,53 @@ if (file_exists($root_dir . '/.env')) {
 }
 
 /**
+ * Load Plugin Configurations
+ */
+function includeDirectory($dir)
+{
+    foreach (scandir($dir) as $filename) {
+        $path = $dir . '/' . $filename;
+        if (is_file($path)) {
+            require_once($path);
+        } elseif (is_dir($path)) {
+            includeDirectory($path);
+        }
+    }
+}
+
+function loadDatabaseConfig($env)
+{
+    putenv(sprintf('DB_HOST=%s', $env['host']));
+    if (array_key_exists('port', $env)) {
+        putenv(sprintf('DB_PORT=%s', $env['port']));
+    }
+    putenv(sprintf('DB_USER=%s', $env['user']));
+    putenv(sprintf('DB_PASSWORD=%s', $env['pass']));
+    putenv(sprintf('DB_NAME=%s', ltrim($env['path'], '/')));
+
+    unset($env);
+}
+
+includeDirectory($root_dir . '/config/plugins');
+
+/**
+ * Configuration - Database: Custom
+ */
+if (!empty(getenv('CUSTOM_DB_URL'))) {
+    $env = parse_url(getenv('CUSTOM_DB_URL'));
+
+    loadDatabaseConfig($env);
+}
+
+/**
+ * Configuration - Worker: IronWorker for WP CronJobs
+ *  Disable WP Cronjobs, because they will be run using the iron worker.
+ */
+if (getenv('IRON_WORKER_PROJECT_ID') && getenv('IRON_WORKER_TOKEN')) {
+    putenv(sprintf('DISABLE_WP_CRON=true'));
+}
+
+/**
  * Set up our global environment constant and load its config first
  * Default: production
  */
