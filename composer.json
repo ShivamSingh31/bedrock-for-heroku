@@ -3,7 +3,7 @@
   "type": "project",
   "license": "MIT",
   "description": "WordPress boilerplate to use on Heroku (based on bedrock)",
-  "homepage": "",
+  "homepage": "https://github.com/zweer/bedrock-for-heroku",
   "authors": [
     {
       "name": "Scott Walkinshaw",
@@ -17,7 +17,8 @@
     },
     {
       "name": "Niccolò Olivieri Achille",
-      "email": "n.olivieriachille@gmail.com"
+      "email": "n.olivieriachille@gmail.com",
+      "homepage": "https://github.com/Zweer"
     }
   ],
   "keywords": [
