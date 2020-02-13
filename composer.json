@@ -1,9 +1,9 @@
 {
-  "name": "roots/bedrock",
+  "name": "zweer/bedrock-for-heroku",
   "type": "project",
   "license": "MIT",
-  "description": "WordPress boilerplate with modern development tools, easier configuration, and an improved folder structure",
-  "homepage": "https://roots.io/bedrock/",
+  "description": "WordPress boilerplate to use on Heroku (based on bedrock)",
+  "homepage": "",
   "authors": [
     {
       "name": "Scott Walkinshaw",
@@ -14,14 +14,17 @@
       "name": "Ben Word",
       "email": "ben@benword.com",
       "homepage": "https://github.com/retlehs"
+    },
+    {
+      "name": "Niccolò Olivieri Achille",
+      "email": "n.olivieriachille@gmail.com"
     }
   ],
   "keywords": [
-    "bedrock", "composer", "roots", "wordpress", "wp", "wp-config"
+    "bedrock", "composer", "roots", "wordpress", "wp", "wp-config", "heroku"
   ],
   "support": {
-    "issues": "https://github.com/roots/bedrock/issues",
-    "forum": "https://discourse.roots.io/category/bedrock"
+    "issues": "https://github.com/zweer/bedrock-for-heroku/issues"
   },
   "repositories": [
     {
