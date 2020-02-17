@@ -39,6 +39,10 @@ if (file_exists($root_dir . '/.env')) {
 function includeDirectory($dir)
 {
     foreach (scandir($dir) as $filename) {
+        if (substr($filename, 0, 1) === '.') {
+            continue;
+        }
+
         $path = $dir . '/' . $filename;
         if (is_file($path)) {
             require_once($path);
