@@ -1,8 +1,9 @@
-# [Bedrock](https://roots.io/bedrock/)
+# [Bedrock](https://roots.io/bedrock/) for Heroku
 
-[![Packagist](https://img.shields.io/packagist/v/roots/bedrock.svg?style=flat-square)](https://packagist.org/packages/roots/bedrock)
-[![Build Status](https://img.shields.io/circleci/build/gh/roots/bedrock?style=flat-square)](https://circleci.com/gh/roots/bedrock)
-[![Follow Roots](https://img.shields.io/twitter/follow/rootswp.svg?style=flat-square&color=1da1f2)](https://twitter.com/rootswp)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Zweer/bedrock-for-heroku)
+
+[![Packagist](https://img.shields.io/packagist/v/zweer/bedrock-for-heroku.svg?style=flat-square)](https://packagist.org/packages/roots/bedrock)
+[![Build Status](https://img.shields.io/circleci/build/gh/zweer/bedrock-for-heroku?style=flat-square)](https://circleci.com/gh/roots/bedrock)
 
 Bedrock is a modern WordPress stack that helps you get started with the best development tools and project structure.
 
