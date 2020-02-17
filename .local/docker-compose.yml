@@ -8,7 +8,7 @@ services:
       - '443:443'
     volumes:
       - ./nginx/default.conf:/tmp/default.template
-      - ../web:/var/www/html:rw,cached
+      - ../:/var/www/html:rw,cached
       - ./certs:/etc/certs
     depends_on:
       - wordpress
@@ -33,7 +33,7 @@ services:
       dockerfile: Dockerfile
     container_name: ${APP_NAME}-wordpress
     volumes:
-      - ../web:/var/www/html:rw,cached
+      - ../:/var/www/html:rw,cached
       - ./config/php.ini:/usr/local/etc/php/conf.d/php.ini
     depends_on:
       - mysql
@@ -57,4 +57,4 @@ services:
     working_dir: /var/www/html
     restart: 'no'
     volumes:
-      - ../web:/var/www/html:rw,cached
+      - ../:/var/www/html:rw,cached
